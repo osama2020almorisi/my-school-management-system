@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>إعدادات الحساب</title>
+</head>
+<body>
+    <div class="settings-container">
+        <header>
+            <h1>إعدادات الحساب</h1>
+            <nav>
+                <ul>
+                    <li><a href="manager_dashboard.html">العودة إلى لوحة التحكم</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <form id="settingsForm">
+            <label for="username">اسم المستخدم:</label>
+            <input type="text" id="username" placeholder="اسم المستخدم" required>
+            
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            
+            <label for="password">كلمة المرور الجديدة:</label>
+            <input type="password" id="password" placeholder="كلمة المرور الجديدة">
+            
+            <button type="submit">تحديث إعدادات الحساب</button>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

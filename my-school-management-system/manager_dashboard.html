@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>لوحة تحكم المدير</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>لوحة تحكم المدير</h1>
+            <nav>
+                <ul>
+                    <li><a href="login.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="content">
+            <h2>مرحبًا بك، [اسم المدير]</h2>
+            <div class="card">
+                <h3>إحصائيات المدرسة</h3>
+                <p>عدد الموظفين: 10</p>
+                <p>إجمالي الطلاب: 300</p>
+
+            </div>
+
+            <div class="card">
+                <h3>رفع طلب جديد</h3>
+                <form id="requestForm">
+                    <label for="requestType">نوع الطلب:</label>
+                    <select id="requestType" required>
+                        <option value="اجازة">إجازة</option>
+                        <option value="نقل">نقل</option>
+                        <option value="تدريب">تدريب</option>
+                        <option value="آخر">آخر</option>
+                    </select>
+
+                    <label for="requestDetails">تفاصيل الطلب:</label>
+                    <textarea id="requestDetails" rows="4" required placeholder="أدخل تفاصيل الطلب هنا..."></textarea>
+
+                    <button type="button" onclick="submitRequest()">رفع الطلب</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3>عرض تفاصيل المدرسة</h3>
+                <button onclick="window.location.href='school_details.html'">عرض التفاصيل</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

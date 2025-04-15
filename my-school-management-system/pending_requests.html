@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>الطلبات المعلقة</title>
+</head>
+<body>
+    <div class="requests-container">
+        <header>
+            <h1>الطلبات المعلقة</h1>
+            <nav>
+                <ul>
+                    <li><a href="supervisor_dashboard.html">العودة إلى لوحة التحكم</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="content">
+            <h2>الطلبات الحالية</h2>
+            <div class="card">
+                <h3>طلب 1</h3>
+                <p>نوع الطلب: إضافة موظف</p>
+                <p>تاريخ الطلب: 01/01/2023</p>
+                <button onclick="alert('تم الموافقة على الطلب!')">موافقة</button>
+                <button onclick="alert('تم رفض الطلب!')">رفض</button>
+            </div>
+            <div class="card">
+                <h3>طلب 2</h3>
+                <p>نوع الطلب: تعديل بيانات موظف</p>
+                <p>تاريخ الطلب: 02/01/2023</p>
+                <button onclick="alert('تم الموافقة على الطلب!')">موافقة</button>
+                <button onclick="alert('تم رفض الطلب!')">رفض</button>
+            </div>
+            <div class="card">
+                <h3>طلب 3</h3>
+                <p>نوع الطلب: طلب إجازة</p>
+                <p>تاريخ الطلب: 03/01/2023</p>
+                <button onclick="alert('تم الموافقة على الطلب!')">موافقة</button>
+                <button onclick="alert('تم رفض الطلب!')">رفض</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

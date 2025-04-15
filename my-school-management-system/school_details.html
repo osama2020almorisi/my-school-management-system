@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>تفاصيل المدرسة</title>
+</head>
+<body>
+    <div class="details-container">
+        <header>
+            <h1>تفاصيل المدرسة</h1>
+            <nav>
+                <ul>
+                    <li><a href="manager_dashboard.html">العودة إلى لوحة التحكم</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="content">
+            <h2>اسم المدرسة: [اسم المدرسة]</h2>
+            <div class="card">
+                <h3>إحصائيات المدرسة</h3>
+                <p>عدد الموظفين: 10</p>
+                <p>إجمالي الطلاب: 300</p>
+                <p>عدد الفصول الدراسية: 15</p>
+                <p>البريد الإلكتروني: school@example.com</p>
+                <p>رقم الهاتف: 0123456789</p>
+            </div>
+            <div class="card">
+                <h3>ملاحظات إضافية</h3>
+                <p>ملاحظات حول المدرسة يمكن أن تضاف هنا.</p>
+            </div>
+
+            <div class="card">
+                <h3>بيانات الموظفين</h3>
+                <div class="table-container">
+                    <table id="employeesTable">
+                        <thead>
+                            <tr>
+                                <th>اسم الموظف</th>
+                                <th>الرقم المالي</th>
+                                <th>الوظيفة</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>رقم الهاتف</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>أحمد علي</td>
+                                <td>123456</td>
+                                <td>مدرس</td>
+                                <td>ahmed@example.com</td>
+                                <td>0123456789</td>
+                            </tr>
+                            <tr>
+                                <td>فاطمة محمد</td>
+                                <td>123457</td>
+                                <td>مساعد إداري</td>
+                                <td>fatima@example.com</td>
+                                <td>0123456790</td>
+                            </tr>
+                            <!-- أضف المزيد من بيانات الموظفين هنا -->
+                        </tbody>
+                    </table>
+                </div>
+                <button onclick="exportData()">تصدير البيانات</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

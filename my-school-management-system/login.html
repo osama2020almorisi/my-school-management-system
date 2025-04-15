@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>تسجيل الدخول</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>تسجيل الدخول</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="اسم المستخدم" required>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // بيانات المستخدمين (يمكنك تعديلها لتناسب قاعدة البيانات الخاصة بك)
+            const users = [
+                { username: 'manager', password: 'manager123', role: 'manager' },
+                { username: 'supervisor', password: 'supervisor123', role: 'supervisor' }
+            ];
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // التحقق من بيانات تسجيل الدخول
+            const user = users.find(user => user.username === username && user.password === password);
+            if (user) {
+                if (user.role === 'manager') {
+                    window.location.href = 'manager_dashboard.html';
+                } else if (user.role === 'supervisor') {
+                    window.location.href = 'supervisor_dashboard.html';
+                }
+            } else {
+                alert('اسم المستخدم أو كلمة المرور غير صحيحة');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>لوحة تحكم الموجه</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>لوحة تحكم الموجه</h1>
+            <nav>
+                <ul>
+                    <li><a href="login.html">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="content">
+            <h2>مرحبًا بك، [أ/مصلح المريسي]</h2>
+            <div class="card">
+                <h3>إحصائيات المدارس</h3>
+                <p>عدد المدارس: 5</p>
+                <p>إجمالي الموظفين: 25</p>
+                <p>إجمالي الطلاب: 500</p>
+            </div>
+            <div class="card">
+                <h3>الطلبات المعلقة</h3>
+                <p>عدد الطلبات: 3</p>
+                <button onclick="window.location.href='pending_requests.html'">عرض الطلبات</button>
+            </div>
+            <div class="card">
+                <h3>إدارة الموظفين</h3>
+                <button onclick="window.location.href='add_employee.html'">إضافة موظف</button>
+                <button onclick="window.location.href='edit_employee.html'">تعديل موظف</button>
+            </div>
+
+            <div class="card">
+                <h3>عرض محدود</h3>
+                <label for="searchType">اختر نوع البحث:</label>
+                <select id="searchType">
+                    <option value="name">اسم الموظف</option>
+                    <option value="financialId">الرقم المالي</option>
+                    <option value="job">فئة الوظيفة</option>
+                    <option value="school">اسم المدرسة</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="أدخل القيمة...">
+                <button onclick="searchEmployees()">بحث</button>
+            </div>
+
+            <h3>نتائج البحث</h3>
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>الرقم المالي</th>
+                            <th>الحالة الوظيفية</th>
+                            <th>الوظيفة</th>
+                            <th>المدرسة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>أحمد علي</td>
+                            <td>123456</td>
+                            <td>نشط</td>
+                            <td>مدرس</td>
+                            <td>مدرسة النجاح</td>
+                        </tr>
+                        <tr>
+                            <td>فاطمة محمد</td>
+                            <td>123457</td>
+                            <td>نشط</td>
+                            <td>مساعد إداري</td>
+                            <td>مدرسة الأمل</td>
+                        </tr>
+                        <tr>
+                            <td>سعيد حسن</td>
+                            <td>123458</td>
+                            <td>معلق</td>
+                            <td>مدير مدرسة</td>
+                            <td>مدرسة الفجر</td>
+                        </tr>
+                        <!-- يمكنك إضافة المزيد من البيانات هنا -->
+                    </tbody>
+                </table>
+                <button onclick="exportData()">تصدير البيانات</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
